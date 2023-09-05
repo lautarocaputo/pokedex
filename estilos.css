@@ -6,7 +6,6 @@ header{
     display: flex;
     align-items: center;
     justify-content: space-between;
-
     padding: 40px 0;
 }
 
@@ -37,6 +36,11 @@ header form{
     border: none;
     outline: none;
     font-size: 15px;
+    background-color:  var(--clr-gray);
+}
+
+.form-group input:visited{
+    background-color:  var(--clr-gray);
 }
 
 
@@ -99,7 +103,7 @@ ul {
 	--color-flying: #3dc7ef;
 	--color-ghost: #4d5b64;
 	--color-normal: #a4acaf;
-	--color-poison: #7e0058;
+	--color-poison: #be208f;
 	--color-rock: #a38c21;
 	--color-fighting: #d56723;
 	--color-dark: #707070;
@@ -114,11 +118,10 @@ ul {
 	--color-primary-hover: #83c5be;
 }
 
-input{
-    background-color: rgb(242,242,242);
-}
-
-
+.button-clicked {
+    opacity: 50%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
 
 * {
     margin: 0;
@@ -131,115 +134,6 @@ input{
 body {
     min-height: 100vh;
     background-color: var(--clr-gray);
-}
-
-/* Globales */
-.container{
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-
-
-/* Btn Filter */
-.container-filter{
-    display: flex;
-}
-
-.icon-filter{
-    display: flex;
-    align-items: center;
-    gap: 15px;
-
-    margin-bottom: 20px;
-    cursor: pointer;
-}
-
-.icon-filter .icon{
-    width: 30px;
-    height: 30px;
-    stroke: #555;
-}
-
-/* Card List Pokemon */
-.card-list-pokemon{
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
-}
-
-.card-pokemon {
-    cursor: pointer;
-    text-decoration: none;
-}
-
-.card-img{
-    background-color: #f2f2f2;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 5px;
-    height: 250px;
-}
-
-.card-img img{
-    width: 100%;
-    height: 100%;
-}
-
-.card-info{
-    padding: 15px;
-}
-
-.card-info h3{
-    color: #333;
-}
-
-.pokemon-id{
-    display: block;
-    color: #888;
-    margin-bottom: 15px;
-}
-
-.card-types{
-    display: flex;
-    gap: 10px;
-    margin-top: 10px;
-}
-
-.card-types span{
-    font-size: 12px;
-    padding: 5px 20px;
-    border-radius: 5px;
-    color: #fff;
-}
-
-
-/* Types of Pokemon */
-.water {
-	background-color: var(--color-water);
-}
-
-.todos {
-    color: white;
-	background-color: var(--color-todos);
-}
-
-.grass {
-	background-color: var(--color-grass);
-}
-
-.poison {
-	background-color: var(--color-poison);
-}
-
-.fire {
-	background-color: var(--color-fire);
-}
-
-.bug {
-	background-color: var(--color-bug);
 }
 
 button {
@@ -264,12 +158,14 @@ main {
     .pokemon-todos {
         grid-template-columns: 1fr 1fr;
     }
+
 }
 
 @media screen and (min-width: 700px) {
     .pokemon-todos {
         grid-template-columns: 1fr 1fr 1fr;
     }
+   
 }
 
 .pokemon {
@@ -331,13 +227,14 @@ main {
 }
 
 .pokemon-nombre {
-    font-size: 1.4rem;
+    font-size: 1.5rem;
+    font-weight: bold;
 }
 
 .pokemon-tipos {
     display: flex;
     gap: .5rem;
-    font-size: .75rem;
+    font-size: .8rem;
     font-weight: 500;
     flex-wrap: wrap;
     justify-content: center;
@@ -351,12 +248,38 @@ main {
 .pokemon-stats {
     display: flex;
     gap: 1rem;
-    font-size: .85rem;
+    font-size: .9rem;
 }
 .stat {
     background-color: var(--clr-gray);
     padding: .25rem .5rem;
     border-radius: 100vmax;
+}
+
+/* Types of Pokemon */
+.water {
+	background-color: var(--color-water);
+}
+
+.todos {
+    color: white;
+	background-color: var(--color-todos);
+}
+
+.grass {
+	background-color: var(--color-grass);
+}
+
+.poison {
+	background-color: var(--color-poison);
+}
+
+.fire {
+	background-color: var(--color-fire);
+}
+
+.bug {
+	background-color: var(--color-bug);
 }
 
 .normal {
