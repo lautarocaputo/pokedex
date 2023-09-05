@@ -112,4 +112,28 @@ $("#btn-buscar").on("click", function (event) {
       },
     });
   }
-});
+})
+
+$("#logo").on("click", function (event) {
+  event.preventDefault();
+  let busqueda = $("#input-buscar").val().toLowerCase();
+  listaPokemon.empty();
+
+  for (let i = 1; i <= cantidadPokemons; i++) {
+    $.ajax({
+      url: url + i,
+      dataType: "json",
+      success: function (data) {
+       
+          mostrarPokemon(data);
+          tipos.removeClass("button-clicked");
+          tiposSeleccionados = [];
+      },
+      error: function () {
+
+      },
+    });
+  }
+})
+
+;
